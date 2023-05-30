@@ -51,7 +51,7 @@ footer {
   background: linear-gradient(to bottom, #EBF1F7, white);
 }
 
-@media only screen (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   #sec-aboutus .box{
     width: 100vw;
     height: auto;
@@ -62,12 +62,11 @@ footer {
   }
 
   .intro-text{
+    width: 80%;
     text-align: left;
-    margin-left:50px;
+    margin-left:20px;
     padding-top: 0;
   }
-  
 
 }
-
 
