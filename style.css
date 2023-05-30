@@ -51,7 +51,7 @@ footer {
   background: linear-gradient(to bottom, #EBF1F7, white);
 }
 
-@media only screen and (min-width: 481px) and (max-width: 900px) {
+@media only screen (max-width: 900px) {
   #sec-aboutus .box{
     width: 100vw;
     height: auto;
