@@ -22,7 +22,9 @@ body {
 
 #sec-aboutus .box h1{
   font-size: 6vh;
-  line-height: 45px;
+}
+#sec-aboutus .box p{
+  font-size: 3vh;
 }
 #sec-aboutus .box img{
 width: 100%;
@@ -49,7 +51,7 @@ footer {
   background: linear-gradient(to bottom, #EBF1F7, white);
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 481px) and (max-width: 900px) {
   #sec-aboutus .box{
     width: 100vw;
     height: auto;
@@ -59,7 +61,7 @@ footer {
     height: auto;
   }
   #sec-aboutus .box h1{
-    font-size: 5vh;
+    font-size: 6vh;
   }
   .intro-text{
     width: 70%;
@@ -67,6 +69,7 @@ footer {
     margin-left:50px;
     padding-top: 0;
   }
+  
 
 }
 
