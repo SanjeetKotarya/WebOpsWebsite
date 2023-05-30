@@ -24,7 +24,7 @@ body {
   font-size: 6vh;
 }
 #sec-aboutus .box p{
-  font-size: 3vh;
+  font-size: 2vh;
 }
 #sec-aboutus .box img{
 width: 100%;
@@ -60,7 +60,9 @@ footer {
     display: block;
     height: auto;
   }
-
+#sec-aboutus .box h1{
+  font-size: 4.5vh;
+}
   .intro-text{
     width: 80%;
     text-align: left;
