@@ -1,30 +1,73 @@
 body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
-    section {
-      padding: 20px;
-      border: 1px solid black;
-    }
-    
-    h1 {
-      margin: 0;
-      font-size: 32px;
-    }
-    
-    h2 {
-      margin-top: 0;
-      font-size: 24px;
-    }
-    
-    p {
-      line-height: 1.5;
-    }
-    
-    footer {
-      color: black;
-      padding: 10px;
-      text-align: center;
-    }
+#sec-aboutus{
+  width: 100vw;
+  background: linear-gradient(to bottom, #EBF1F7, white);
+  display: flex;
+  font-family: Orbitron;
+  height: 100vh;
+  margin-bottom: 60px;
+
+}
+#sec-aboutus .box{
+  position:relative;
+  width: 50%;
+  justify-content: center;
+}
+
+#sec-aboutus .box h1{
+  font-size: 6vh;
+  line-height: 45px;
+}
+#sec-aboutus .box img{
+width: 100%;
+height:100%;
+}
+
+.intro-text{
+  margin: 0 auto;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  width: 60%;
+  height:auto ;
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+
+footer {
+  color: black;
+  padding: 10px;
+  text-align: center;
+  height: 50vh;
+  background: linear-gradient(to bottom, #EBF1F7, white);
+}
+
+@media only screen and (max-width: 800px) {
+  #sec-aboutus .box{
+    width: 100vw;
+    height: auto;
+  }
+  #sec-aboutus{
+    display: block;
+    height: auto;
+  }
+  #sec-aboutus .box h1{
+    font-size: 5vh;
+  }
+  .intro-text{
+    width: 70%;
+    text-align: left;
+    margin-left:50px;
+    padding-top: 0;
+  }
+
+}
+
+
