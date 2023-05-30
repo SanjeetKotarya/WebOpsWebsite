@@ -100,15 +100,8 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: transparent;
-    background-color: black;
     cursor: pointer;
-    color: #10141B;
-    padding: 10px;
-    text-align: center;
-    font-size: 30px;
-    padding: 4px 10px 4px 10px;
-    border-radius: 100%;
+    margin: 0 auto;
     z-index: 100;
     transition: .5s;
     color: white;
@@ -134,7 +127,7 @@
     border-bottom: 10px solid black;
   }
 
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (min-width: 481px) and (max-width: 900px) {
     .nav-first ul {
       display: none;
     }
@@ -217,8 +210,8 @@
   <div class="nav-first">
     <a href="#"><img src="d.png"></a>
     <ul>
+      <li><a href="">Us</a></li>
       <li><a href="">Projects</a></li>
-      <li><a href="">About us</a></li>
       <li><a href="">Contact</a></li>
       <li><a href="">Join Us</a></li>
     </ul>
@@ -241,4 +234,4 @@
   </div>
 </div>
 
-<a id="top" onclick="scrollToTop()">&#11165;</a>
+<img src="arrow.png" id="top" onclick="scrollToTop()">
