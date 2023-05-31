@@ -5,7 +5,7 @@ body {
   overflow-x: hidden;
 }
 section{
- width: 100vw;
+ max-width: 100%;
 }
 #sec-aboutus{
   background: linear-gradient(to bottom, #EBF1F7, white);
