@@ -8,11 +8,11 @@ fetch('nav.html')
     })
 
 function toggleMenu() {
-    var menuIcon = document.querySelector('.menu-icon');
+    var wrapperMenu = document.querySelector('.menu-icon');
     var menuDiv = document.getElementById('menu-div');
-
-    menuIcon.classList.toggle('cross');
     menuDiv.classList.toggle('menu-visible');
+
+    wrapperMenu.classList.toggle('open');   
 }
 
 
