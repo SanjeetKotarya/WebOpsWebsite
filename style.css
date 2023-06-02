@@ -44,14 +44,6 @@ height:100%;
 }
 
 
-footer {
-  color: black;
-  padding: 10px;
-  text-align: center;
-  height: 50vh;
-  background: linear-gradient(to bottom, #EBF1F7, white);
-}
-
 @media only screen and (max-width: 800px) {
   #sec-aboutus .box{
     width: 100vw;
