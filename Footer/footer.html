@@ -15,7 +15,7 @@
   --footer-background:black;
   display: grid;
   position: relative;
-  width: 100%;
+  max-width: 100%;
   grid-area: footer;
   min-height: 12rem;
 }
@@ -39,6 +39,7 @@ body .footer .bubbles .bubble {
 }
 body .footer .content {
   padding-top:50px ;
+  max-width: 100%;
   background: var(--footer-background);
   z-index: 2;
 }
@@ -59,25 +60,25 @@ body .footer .content {
   display: flex;
   justify-content: space-between;
   text-decoration: none;
-  margin-left: 150px;
 }
+
 .footer__links  li{
   margin: 0 25px 0 -12px;
   padding: 20px 30px 20px 30px;
-  cursor: pointer;
-  border: solid #1B2328 1px;
+
+  transition: ease-in 0.2s;
   border-radius: 15px;
 }
+
 .footer__title{
   padding: 0;
   margin: 0;
 }
+
 .footer__title img{
   width: 100px;
 }
-.footer__links li{
-  transition: ease-in 0.2s;
-}
+
 .footer__links li:hover{
     border-color:white;
 }
@@ -90,7 +91,7 @@ body .footer .content {
 }
 
 .footer__social {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-right: 1.5rem;
 }
 .footer__social:hover {
@@ -147,10 +148,8 @@ body .footer .content {
 
 @media screen and (max-width: 800px){
   .footer__socials {
-  padding-top:0px ;
-  
+  padding-top:0px ; 
 }
-
   .footer__links  {
   margin-left: -20px;
 }
@@ -179,8 +178,13 @@ body .footer .content {
     row-gap: 3.5rem;
   }
 }
+.bottom-foot{
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
 </style>
+<div class="bottom-foot">
 <div class="footer" id="footer-section">
   <div class="bubbles">
     <div class="bubble" style="--size:3.283778460829012rem; --distance:8.273995682244763rem; --position:80.43121961838831%; --time:3.370470516561046s; --delay:-2.4460750377075677s;"></div>
@@ -353,3 +357,4 @@ body .footer .content {
     </filter>
   </defs>
 </svg>
+</div>
