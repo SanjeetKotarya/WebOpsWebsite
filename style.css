@@ -7,6 +7,9 @@ body {
 section{
  max-width: 100%;
 }
+a{
+text-decoration:none;
+}
 #sec-aboutus{
   background: linear-gradient(to bottom, #EBF1F7, white);
   display: flex;
