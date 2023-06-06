@@ -13,16 +13,16 @@
 }
   .nav-first {
     position: relative;
-    left: 0;
-    right: 0;
     display: flex;
     justify-content: space-between;
     background: #10141B;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
     box-shadow: 0 10px 30px rgba(#414856, 0.05);
     border: solid #1B2328 1px;
     font-family: Orbitron;
     color: white;
+    text-align: center;
+    align-items: center;
     border-radius: 50px;
   }
 
@@ -42,7 +42,6 @@
     list-style: none;
     font-size: 14px;
     display: flex;
-    padding: 0;
   }
 
   .nav-first ul li {
@@ -101,9 +100,7 @@
   }
   #menu-div ul li:active{
   background-color: #00b524;
-
 }
-
 
   #menu-div ul li:nth-child(1) {
     animation: translateX 100ms ease-in-out forwards;
@@ -156,7 +153,6 @@
     transition: transform 330ms ease-out;
   }
 
-
   .line {
     background-color: #fff;
     border-radius: 5px;
@@ -171,7 +167,6 @@
   transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
   transform-origin: right;
   width: 50%;
-
   }
 
   .menu-icon .line:nth-child(3) {
@@ -210,7 +205,7 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width:30px;
+    width:50px;
     height:auto;
     cursor: pointer;
     margin: 0 auto;
