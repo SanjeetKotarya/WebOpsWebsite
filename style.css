@@ -15,9 +15,12 @@ text-decoration:none;
   background-size: cover;
   font-family: Orbitron;
   color: white;
-  margin-bottom: 30px;
+  height: 96vh;
   border-radius: 25px;
+  text-align: center;
+  align-items: center;
 }
+
 #sec-aboutus .box{
   position:relative;
   justify-content: center;
