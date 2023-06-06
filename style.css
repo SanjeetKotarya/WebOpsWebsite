@@ -9,6 +9,7 @@ body {
 a{
 text-decoration:none;
 }
+
 #sec-aboutus{
   display: flex;
   background-image: url(BACKGORUND.png);
@@ -27,7 +28,6 @@ text-decoration:none;
   width: 100%;
 }
 
-
 #sec-aboutus .box p{
   font-size: 2vh;
 }
@@ -44,17 +44,6 @@ height:100%;
   width: 60%;
 }
 
-
-footer {
-  color: black;
-  padding: 10px;
-  background: white;
-  text-align: center;
-  border-radius: 25px ;
-  border-top: solid black 1px;
-  margin-top: 20px;
-  height: 20vh;
-}
 
 @media only screen and (max-width: 800px) {
 
