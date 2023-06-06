@@ -6,7 +6,9 @@ body {
   padding:0 5px 0 5px;
   overflow-x: hidden ;
 }
-
+a{
+text-decoration:none;
+}
 #sec-aboutus{
   display: flex;
   background-image: url(BACKGORUND.png);
