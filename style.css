@@ -54,9 +54,7 @@ footer {
 }
 
 @media only screen and (max-width: 800px) {
-  body {
-  padding:0 0 0 0;
-}
+
   #sec-aboutus .box{
     width: 100vw;
     height: auto;
