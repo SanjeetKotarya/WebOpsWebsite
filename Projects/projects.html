@@ -1,177 +1,285 @@
 <style>
-
- #sec-proj {
-  padding: 80px 0;
-  background-color: #f5f5f5;
+  .block {
+  width: 20%;
+  height: 100%;
+  float: left;
 }
 
-.projects-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 40px;
-  margin-top: 70px;
+
+#block3 {
+  background: #fff;
+/*   overflow-y: scroll; */
+  padding-bottom: 2%;
 }
 
-.projects-list div {
-  padding: 40px;
-  border-radius: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  color: #fff;
+
+/* portfolio page styling */
+
+.section {
+  margin-top: 50px;
+  padding: 30px 0;
+}
+.section .top-side {
   text-align: center;
-  background: linear-gradient(to bottom right, #68b684, #3fada8);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.projects-list div:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-.projects-list div i {
-  font-size: 60px;
-  margin-bottom: 30px;
-  color: #fff;
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-.projects-list div:hover i {
-  transform: scale(1.1);
-  opacity: 0.9;
-}
-
-.projects-list div h2 {
-  font-size: 26px;
-  margin-bottom: 20px;
+.section .top-side  h1 {
+  font-size: 80px;
+  font-family: "Times New Roman";
   text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #fff;
 }
-
-.projects-list div p {
-  font-size: 18px;
-  margin-bottom: 25px;
-  opacity: 0.9;
-}
-
-.projects-list div a {
-  font-size: 16px;
-  margin-top: 30px;
-  padding: 15px 30px;
-  border-radius: 25px;
-  transition: background-color 0.3s, color 0.3s;
-
-  background-color: #68b684;
-  color: #fff;
-}
-
-.projects-list div a:hover {
-  color: #fff;
-  background-color: #3fada8;
-}
-
-#sec-proj .sub-title {
-  color: #333;
-  font-size: 36px;
-  font-weight: 600;
+.section.portfolio .filters {
   text-align: center;
-  margin-bottom: 60px;
+  margin-top: 10px;
 }
-/* Responsive Styles */
+.section.portfolio .filters ul {
+  padding: 0;
+}
+.section.portfolio .filters ul li {
+  list-style: none;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin: 5px;
+  border-radius: 50px;
+  font-family: Helvetica;
+  color: black;
+  border: 1px solid black;
+  font-size: 14px;
+  position: relative;
+  letter-spacing: 4px;
 
-@media screen and (max-width: 768px) {
-  .projects-list {
-    grid-template-columns: 1fr;
-  }
-  
-  .projects-list div {
-    padding: 30px;
-    text-align: center;
-  }
-  
-  .projects-list div i {
-    font-size: 40px;
-    margin-bottom: 20px;
-  }
-  
-  .projects-list div h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
-  
-  .projects-list div p {
-    font-size: 16px;
-    margin-bottom: 15px;
-  }
-  
-  .projects-list div a {
-    font-size: 14px;
-    margin-top: 20px;
-    padding: 12px 25px;
-  }
-  
-  #sec-proj .sub-title {
-    font-size: 28px;
-    margin-bottom: 50px;
-  }
 }
+
+.section.portfolio .filters ul li:hover{
+  color: white;
+  background: black;
+}
+.section.portfolio .filters ul li.active:after {
+  width: calc(100% - 60px);
+}
+.section.portfolio .filters-content {
+  margin-top: 50px;
+}
+.section.portfolio .filters-content .show {
+  opacity: 1;
+  visibility: visible;
+  transition: all 350ms;
+}
+.section.portfolio .filters-content .hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 350ms;
+}
+.section.portfolio .filters-content .item {
+  text-align: center;
+  font-family: Helvetica;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+}
+.section.portfolio .filters-content .item .p-inner {
+  padding: 2px 30px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.section.portfolio .filters-content .item .p-inner h5 {
+  font-size: 18px;
+  color: #888;
+  font-family: Helvetica;
+  margin: 5px 0 0 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.section.portfolio .filters-content .item .p-inner .cat {
+  font-size: 16px;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  color: #888;
+  letter-spacing: 0.5px;
+}
+.section.portfolio .filters-content .item img {
+  width: 100%;
+  /* margin-bottom: 2px; */
+}
+.after-click {
+  color: #87ceeb;
+  font-weight: bold;
+}
+.project-view a {
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #808080;
+}
+
+.after-click {
+  color: #87ceeb;
+  font-weight: bold;
+}
+
+.project-view {
+  display: block;
+  width: 60%;
+  margin: 5px auto;
+  padding: 10px;
+  border: 1px solid #888;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.project-view a:hover {
+  color: #c0c0c0;
+}
+/* end of the portfolio page styling   */
+
+
 
 </style>
 
+<!-- projects section start -->
+<section class="portfolio section">
+  <div class="container-fluid">
+    <div class="top-side">
+      <h1 class="title">Projects</h1>
+      <!-- <h2>PORTFOLIO</h2> -->
+    </div>
 
-<section id="sec-proj">
-    <div class="container">
-      <h1 class="sub-title">Past projects</h1>
-      <div class="projects-list">
-        <div>
-          <i class="fa-solid fa-code"></i>
-          <h2>Project 1</h2>
-          <p>Description of Project 1</p>
-          <a href="#">Learn more</a>
+    <div class="filters">
+      <ul>
+        <li class="active" data-filter="*"> All</li>
+        <li data-filter=".frontend">FrontEnd</li>
+        <li data-filter=".dv">Data Visualization</li>
+        <li data-filter=".vue">Vue.js</li>
+      </ul>
+    </div>
+
+    <div class="filters-content">
+      <div class="row grid">
+        <!-- front-end projects start -->
+        <div class="col-sm-4 all frontend">
+          <div class="item">
+            <img src="https://res.cloudinary.com/dlof5usn7/image/upload/c_scale,h_150,w_350/v1508550296/tribute-rafa_bjq4wi.png" alt="Work 1">
+            <div class="p-inner">
+              <h5>Tribute Page</h5>
+              <div class="cat"></div>
+              <div class="project-view">
+                <a href="https://codepen.io/ravikishorethella/full/bWJNJP/" target="_blank">View Project</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <i class="fa-solid fa-code"></i>
-          <h2>Project 2</h2>
-          <p>Description of Project 2</p>
-          <a href="#">Learn more</a>
+        <div class="col-sm-4 all dv">
+          <div class="item">
+            <img src="https://res.cloudinary.com/dlof5usn7/image/upload/c_scale,h_150,w_350/v1508559810/dv_life_exp_owbzxs.png" alt="Work 1">
+            <div class="p-inner">
+              <h5>Life Expectancy in USA</h5>
+              <div class="cat"></div>
+              <div class="project-view">
+                <a href="" target="_blank">View Project</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <i class="fa-solid fa-code"></i>
-          <h2>Project 3</h2>
-          <p>Description of Project 3</p>
-          <a href="#">Learn more</a>
+        <div class="col-sm-4 all frontend">
+          <div class="item">
+            <img src="https://res.cloudinary.com/dlof5usn7/image/upload/c_scale,h_150,w_350/v1508550180/calculator_mu8mte.png" alt="Work 1">
+            <div class="p-inner">
+              <h5>JavaScript Calculator</h5>
+              <div class="cat"></div>
+              <div class="project-view">
+                <a href="" target="_blank">View Project</a>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="col-sm-4 all frontend">
+          <div class="item">
+            <img src="https://res.cloudinary.com/dlof5usn7/image/upload/c_scale,w_350/v1508555820/wiki_azkady.png" alt="Work 1">
+            <div class="p-inner">
+              <h5>Wikipedia Viewer</h5>
+              <div class="cat"></div>
+              <div class="project-view">
+                <a href="" target="_blank">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 all frontend">
+          <div class="item">
+            <img src="https://res.cloudinary.com/dlof5usn7/image/upload/c_scale,h_150,w_350/v1508552399/weather_dcqpek.png" alt="Work 1">
+            <div class="p-inner">
+              <h5>Local Weather</h5>
+              <div class="cat"></div>
+              <div class="project-view">
+                <a href="" target="_blank">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 all frontend">
+          <div class="item">
+            <img src="https://res.cloudinary.com/dlof5usn7/image/upload/c_scale,h_150,w_350/v1508552399/quote_fz4gtz.png" alt="Work 1">
+            <div class="p-inner">
+              <h5>Random Quote Generator</h5>
+              <div class="cat"></div>
+              <div class="project-view">
+                <a href="" target="_blank">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 all frontend">
+          <div class="item">
+            <img src="https://res.cloudinary.com/dlof5usn7/image/upload/c_scale,h_150,w_350/v1508552399/twitch_lnx2of.png" alt="Work 1">
+            <div class="p-inner">
+              <h5>Twitchtv Streamer</h5>
+              <div class="cat"></div>
+              <div class="project-view">
+                <a href="" target="_blank">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 all frontend">
+          <div class="item">
+            <img src="https://res.cloudinary.com/dlof5usn7/image/upload/c_scale,h_150,w_350/v1508555820/clock_khzrqv.png" alt="Work 1">
+            <div class="p-inner">
+              <h5>Pomodoro Clock</h5>
+              <div class="cat"></div>
+              <div class="project-view">
+                <a href="" target="_blank">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 all frontend">
+          <div class="item">
+            <img src="https://res.cloudinary.com/dlof5usn7/image/upload/c_scale,h_150,w_350/v1508555820/tictactoe_tsxwqp.png" alt="Work 1">
+            <div class="p-inner">
+              <h5>Multiplayer TicTacToe</h5>
+              <div class="cat"></div>
+              <div class="project-view">
+                <a href="" target="_blank">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of frontend projects -->
+
+
       </div>
     </div>
+
+  </div>
 </section>
-<!--Current Projects-->
-<section id="sec-proj">
-    <div class="container">
-      <h1 class="sub-title">Current projects</h1>
-      <div class="projects-list">
-        <div>
-          <i class="fa-solid fa-code"></i>
-          <h2>Project 1</h2>
-          <p>Description of Project 1</p>
-          <a href="#">Learn more</a>
-        </div>
-        <div>
-          <i class="fa-solid fa-code"></i>
-          <h2>Project 2</h2>
-          <p>Description of Project 2</p>
-          <a href="#">Learn more</a>
-        </div>
-        <div>
-          <i class="fa-solid fa-code"></i>
-          <h2>Project 3</h2>
-          <p>Description of Project 3</p>
-          <a href="#">Learn more</a>
-        </div>
-      </div>
-    </div>
-</section>
-
-
-<!--Vaishnavi's block END-->
-
-
-
+<!-- end of the project section -->
