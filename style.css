@@ -1,5 +1,7 @@
 *{
   scroll-behavior: smooth;
+  box-sizing: border-box;
+  cursor: none
 }
 body {
   margin: 0;
@@ -7,5 +9,5 @@ body {
   overflow-x: hidden ;
 }
 a{
-text-decoration:none;
+  text-decoration: none;
 }
