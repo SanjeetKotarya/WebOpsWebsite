@@ -1,73 +1,91 @@
 <style>
-  
-#sec-aboutus{
-  display: flex;
-  background-image: url(BACKGORUND.png);
-  background-size: cover;
-  font-family: Orbitron;
-  color: white;
-  height: 96vh;
-  text-align: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-#sec-aboutus .box{
-  position:relative;
-  justify-content: center;
-  width: 100%;
-}
-
-#sec-aboutus .box p{
-  font-size: 2vh;
-}
-#sec-aboutus .box img{
-width: 100%;
-height:100%;
-}
-
-.intro-text{
-  margin: 0 auto;
-  justify-content: center;
-  position: relative;
-  align-items: center;
-  width: 60%;
-}
-@media only screen and (max-width: 800px) {
-
-  #sec-aboutus .box{
-    width: 100vw;
-    height: auto;
-  }
-  #sec-aboutus{
-    display: block;
-    height: auto;
-  }
-#sec-aboutus .box h1{
-  font-size: 4.5vh;
-}
-  .intro-text{
-    width: 80%;
-    text-align: left;
-    margin-left:20px;
-    padding-top: 0;
+  #sec-aboutus {
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
   }
 
-}
+  #sec-aboutus .text-box {
+background: black;
+color: white;
+    border-radius: 25px;
+    position: absolute;
+  }
+
+
+  #sec-aboutus .text-box p {
+    text-align: justify;
+    font-size: 2vh;
+    padding: 20px;
+    font-family: Orbitron;
+  }
+
+  #sec-aboutus .video-box video {
+    border-radius: 25px;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  #sec-aboutus .video-box{
+    position: absolute;
+    top: 82px;
+    height: 87%;
+    border: solid black 1px;
+    left: 500px;
+    border-radius: 25px;
+    z-index: -1;
+  }
+  @media only screen and (min-width: 800px) {
+    #sec-aboutus .text-box {
+    width: 30%;
+    left: 22px;
+    top: 82px;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+
+    #sec-aboutus .video-box{
+    top: 82px;
+    border-radius: 0;
+    left: 0;
+  } 
+
+  #sec-aboutus .video-box video{
+    border-radius: 0;
+  } 
+
+    #sec-aboutus .text-box {
+      width: 80%;
+    }
+
+    #sec-aboutus {
+      padding-top: 150px;
+      height: 70vh;
+    }
+  }
 </style>
 
 <div id="sec-aboutus">
-  <div class="box">
-    <div class="intro-text">
-      <p>
-        We understand the importance of effective web operations in today's
-        digital landscape.
-        Our dedicated team of experts combines technical expertise and
-        innovative strategies to streamline your web presence, ensuring
-        seamless functionality and optimal performance.
-      </p>
-    </div>
+  <div class="text-box">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Recusandae quod magnam sequi enim quo laudantium soluta blanditiis quia consectetur, 
+      expedita temporibus, cum officiis totam doloremque unde harum dolor, veritatis quae sunt! 
+      Repellendus, qui. Corporis voluptas optio doloribus, at quidem cumque?
+
+    </p>
   </div>
-  <div class="box" style="height: 50vh;">
+  <div class="video-box">
+    <video autoplay muted loop>
+      <source src="/Blue.mp4" type="video/mp4">
+    </video>
   </div>
+</div>
 </div>
