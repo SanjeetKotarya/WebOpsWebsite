@@ -1,90 +1,134 @@
   <!-- BOOTSTRAP -->
 
 
-<style>
-
-.about-section {
-  padding: 50px 50px;
-}
-.row{
-  display: flex;
+  <style>
+    .about-section{
+      margin-top: 10px;
+    }
+    
+    .row{
+      padding: 50px 0;
+      height: 100vh;
+      width: 100%;
+      display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-}
-.abox{
-  position: relative;
-  width: 50%;
-  display:block;
-  justify-content: center;
-}
+  overflow: hidden;
 
-@media (max-width: 767px) {
-  .abox {
-    width: 100%;
-  }
-  .about-section {
-  padding: 50px 50px;
-}
-}
-.about-section h1 {
-  font-size: 80px;
-  font-family: "Times New Roman";
-  text-transform: uppercase;
-}
+  align-items: center;
 
-.about-section h3 {
-  font-family: Helvetica;
-  padding: 8px 0;
-  margin-bottom: 20px;
-  font-style: italic;
-}
-.abox p {
-  margin-bottom: 30px;
-}
-.abox a {
-  color: black;
-  padding: 18px 36px;
-  border: 1px solid black;
-  font-size: 12px;
-  position: relative;
-  border-radius: 50px;
-  letter-spacing: 4px;
-}
+    }
+    .abox{
+      position: relative;
+      width: 50%;
+      height: 100%;
+      display:block;
+      justify-content: center;
+    }
+    
+    @media (max-width: 767px) {
+      .abox {
+        position: absolute;
+        width: 100%;
 
-.abox a:hover {
-  text-decoration: none;
-  color: white;
-  background: black;
-}
+      }
+      .row{
+        display: inline-block;
+      }
+      .abox .img2{
+        display: none;
+      }
+      .text-box{
+        margin-top: 50px;
+      }
 
 
-</style>
-<div class="about-section">
-  <div class="container">
-    <div class="row">
-      <div class="abox" style="text-align: center;">
-        <h1>About</h1>
-      </div>
-      <div class="abox" style="text-align: left;">
-        <h3>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Nesciunt esse autem hic!
-        </h3>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
-          asperiores voluptates, tenetur incidunt libero at aut culpa
-          atque ab repellat deserunt ullam eaque eum.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Recusandae quod magnam sequi enim quo laudantium soluta
-          blanditiis quia consectetur, expedita temporibus, cum officiis
-          totam doloremque unde harum dolor, veritatis quae sunt!
-          Repellendus, qui. Corporis voluptas optio doloribus, at quidem
-          cumque?
-        </p>
-        <a href="#sec-contact">MORE INFO</a>
+
+    }
+    .about-section h2 {
+      font-size: 50px;
+      font-family: "Times New Roman";
+      text-transform: uppercase;
+    }
+    
+    .about-section h3 {
+      font-family: Helvetica;
+      padding: 8px 0;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .abox p {
+      margin-bottom: 30px;
+    }
+    .abox a {
+      color: black;
+      padding: 18px 36px;
+      font-size: 12px;
+      position: relative;
+      border: solid black 1px;
+      letter-spacing: 4px;
+    }
+    
+    .abox a:hover {
+      text-decoration: none;
+      color: white;
+      background: black;
+    }
+    .abox .img1{
+      position: absolute;
+      width: 70%;
+      border-top-right-radius: 50px;
+      border-bottom-left-radius: 50px;
+      top: 0;
+      height: 40%;
+      left: 0;
+    }
+    .abox .img2{
+      position: absolute;
+      width: 80%;
+      height: 50%;
+      bottom: 0;
+      right: 0;
+      border-top-right-radius: 50px;
+      border-bottom-left-radius: 50px;
+    }
+    
+    .text-box{
+      border-radius: 25px;
+      background: white;
+padding: 20px;
+    }
+    </style>
+    <div class="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="abox" style="text-align: center;">
+            <img class="img1" src="/BACKGORUND.png">
+            <img class="img2" src="/BACKGORUND.png">
+          </div>
+          <div class="abox" style="text-align: left; padding: 0 50px;">
+            <div class="text-box">
+            <h2>About</h2>
+
+            <h3>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Nesciunt esse autem hic!
+            </h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
+              asperiores voluptates, tenetur incidunt libero at aut culpa
+              atque ab repellat deserunt ullam eaque eum.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Recusandae quod magnam sequi enim quo laudantium soluta
+              blanditiis quia consectetur, expedita temporibus, cum officiis
+              totam doloremque unde harum dolor, veritatis quae sunt!
+              Repellendus, qui. Corporis voluptas optio doloribus, at quidem
+              cumque?
+            </p>
+            <a href="#sec-contact">MORE INFO</a>
+          </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
