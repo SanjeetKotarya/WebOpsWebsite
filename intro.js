@@ -1,4 +1,4 @@
-fetch('Intro/intro.html')
+fetch('intro.html')
     .then(res => res.text())
     .then(text => {
         let oldelem = document.querySelector("script#intro-section");
