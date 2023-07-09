@@ -1,0 +1,139 @@
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+  width: 100%;
+  margin-bottom: 100px;
+  margin-top:50px ;
+  font-family: Poppins;
+
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.grid-item img {
+  max-width: 70%;
+  height: auto;
+}
+
+.desktop-only .grid-item h1 {
+  margin-top: 10px;
+}
+.desktop-only .grid-item h2 {
+    color: gray;
+}
+
+.desktop-only {
+  display: none;
+  margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+  .desktop-only {
+    display: block;
+  }
+}
+
+.desktop-only .main .title p {
+    font-size: 20px;
+    font-weight: 5;
+  }
+
+  .desktop-only .main .title h1 {
+    font-size: 45px;
+    font-weight: 700;
+  }
+
+.more-info{
+    z-index: 100;
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    display: none;
+    left: 30%;
+    margin-top: 50px;
+    background: white;
+    animation: show ease-in;
+    border: solid black 1px;
+}
+
+.more-info img{
+    position: relative;
+    width: 50%;
+}
+.more-info .info{
+    position: relative;
+    width: 50%;
+}
+
+</style>
+
+
+<div class="desktop-only">
+<div class="main">
+<div class="title">
+    <h1>Meet the team</h1>
+    <p>Team spirit starts with spirited humans. We believe great work<br>
+      begins with happy people and ends with happy clients.</p>
+  </div>
+</div>
+<div class="grid-container">
+    <div class="grid-item" onclick=moreinfo()>
+        <img src="/members/man.png">
+        <h1><b>Araj Khandelwal</b></h1>
+        <h2>Head</h2>
+        <div class="more-info">
+            <img src="/members/man.png">
+            <span class="info">Team spirit starts with spirited humans.</span>
+        </div>
+    </div>
+    <div class="grid-item">
+        <img src="/members/man.png">
+        <h1><b>Shishir Chaurasiya</b></h1>
+        <h2>Head</h2>
+        <div class="more-info">
+            <img src="/members/man.png">
+            <span class="info">Team spirit starts with spirited humans.</span>
+        </div>
+        </div>
+    <div class="grid-item">
+        <img src="/members/man.png">
+        <h1><b>Sanjeet Kotarya</b></h1>
+        <h2>Super Coordinator</h2>
+    </div>
+    <div class="grid-item">
+        <img src="/members/man.png">
+        <h1><b>Anmol Upadhyay</b></h1>
+        <h2>Coordinator</h2>
+    </div>
+    <div class="grid-item">
+        <img src="/members/man.png">
+        <h1><b>Vaishnavi Sinha</b></h1>
+        <h2>Coordinator</h2>
+    </div>
+    <div class="grid-item">
+        <img src="/members/man.png">
+        <h1><b>Bikas Kumar</b></h1>
+        <h2>Coordinator</h2>
+    </div>
+    <div class="grid-item">
+        <img src="/members/man.png">
+        <h1><b>Rudra</b></h1>
+        <h2>Coordinator</h2>
+    </div>
+    <div class="grid-item">
+        <img src="/members/man.png">
+        <h1><b>Vishal KR</b></h1>
+        <h2>Coordinator</h2>
+    </div>
+</div>
+</div>
