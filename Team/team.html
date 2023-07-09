@@ -1,186 +1,186 @@
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-:root {
-  --carousel-item-height: 200px;
-}
-.carousel {
-  width: 100%;
-  padding: 30px 0 30px;
-  position: relative;
-  box-sizing: border-box;
-  text-align: center;
-}
-.carousel__container {
-  white-space: nowrap;
-  padding: 10px 0;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-}
-.carousel__container::-webkit-scrollbar {
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+  :root {
+    --carousel-item-height: 200px;
+  }
+
+  .carousel {
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;    
+  }
+
+  .carousel__container {
+    white-space: nowrap;
+    padding: 20px 55px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+  }
+
+  .carousel__container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-item {
+    width: 200px;
+    height: 250px;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    transition: 450ms all;
+    position: relative;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  }
+
+  .carousel-item:hover~.carousel-item {
+    transform: translate3d(10px, 0, 0);
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+  }
+
+  .carousel__container:hover .carousel-item:hover {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  .carousel-item__img {
+    width: 95%;
+    height: auto;
+    object-fit: cover;
+    justify-self: center;
+  }
+
+  .carousel-item__details {
+    font-size: 10px;
+    color: black;
+    transition: 450ms opacity;
+    padding: 0 10px 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    white-space: normal;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .carousel-item__details--title {
+    font-size: 20px;
+  }
+
+  .carousel-item__details--icons {
+    color: black;
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+
+  .carousel-item__details--icons a {
+    width: 33px;
+    padding: 2px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    color: black;
+
+  }
+
+  .carousel-item__details--icons a i {
+    cursor: pointer;
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel::-webkit-scrollbar-track-piece {
+    max-width: 100px;
+  }
+
+  .scroll-left {
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 5px;
+    z-index: 1;
+  }
+
+  .scroll-right {
+    display: block;
+    position: absolute;
+    top: 40%;
+    right: 5px;
+    z-index: 2;
+  }
+
+  .main {
+    position: relative;
+    width: 100%;
+    border: solid white 1px;
+    margin: 0 auto;
+    border-radius: 25px;
+    margin-top: 50px;
+  }
+
+  .main .title {
+    text-align: center;
+    align-items: center;
+    color: black;
+    justify-content: center;
+    font-family: Poppins;
+  }
+
+  .main .title p {
+    font-size: 15px;
+    font-weight: 5;
+  }
+
+  .main .title h1 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .phone-only {
   display: none;
 }
-.carousel-item {
-  background-color: #caa5f1;
-  width: 150px;
-  height: 200px;
-  border-radius: 8px;
-  overflow: hidden;
-  margin-right: 10px;
-  display: inline-block;
-  cursor: pointer;
-  transition: 450ms all;
-  transform-origin: center left;
-  position: relative;
-}
-.carousel-item:hover ~ .carousel-item {
-  transform: translate3d(10px, 0, 0);
-}
-.carousel__container:hover .carousel-item {
-  opacity: 0.9;
-}
-.carousel__container:hover .carousel-item:hover {
-  transform: scale(1.1);
-  opacity: 1;
-}
-.carousel-item__img {
-  width: 200px;
-  height: var(--carousel-item-height);
-  object-fit: cover;
-}
-.carousel-item__details {
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  font-size: 10px;
-  color: white;
-  opacity: 0;
-  transition: 450ms opacity;
-  padding: 10px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  text-align: center;
-  white-space: normal;
-  display: flex;
-  flex-flow: row wrap;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-}
-.carousel-item__details:hover {
-  opacity: 1;
-}
-.carousel-item__details--title {
-  font-size: 15px;
-}
 
-.carousel-item__details--icons {
-  color:white;
-  display: flex;
-  position: relative;
-  width: 80%;
-  justify-content: space-between;
-  margin-top: 5px;
-
-}
-.carousel-item__details--icons a{
-  width: 40px;
-  padding: 1px;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  border: solid white 1px;
-  background: black;
-  cursor: pointer;
-}
-
-.carousel-item__details--icons a i{
-  cursor: pointer;
-}
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.carousel::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-.carousel::-webkit-scrollbar-track-piece {
-  max-width: 100px;
-}
-
-.scroll-left {
-  display: block;
-  position: absolute;
-  top: 40%;
-  left: 5px;
-  z-index: 1;
-}
-.scroll-right {
-  display: block;
-  position: absolute;
-  top: 40%;
-  right: 5px;
-  z-index: 2;
-}
-.scroll-chevron {
-  font-size: 1rem;
-  cursor: pointer;
-  background: black;
-  border-radius: 100%;
-  width: 40px;
-  padding: 7px;
-  text-align: center;
-  align-items: center;
-  height: 40px;
-color: white;
-}
-.main {
-  position: relative;
-  width: 100%;
-  padding-top: 100px;
-  margin: 0 auto;
-}
-.main .title{
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  font-family: Poppins;
-}
-.main .title h4{
-  font-size: 16px;
-}
-.main .title h1{
-  font-size: 35px;
-  font-weight: 800;
-}
-.main .title h2{
-  font-size: 16px;
+@media (max-width: 768px) {
+  .phone-only {
+    display: block;
+  }
 }
 
 </style>
 
-<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+<div class="phone-only">
+
 <div class="main">
-<div class="title">
-  <h4>Our team</h4>
-  <h1>Meet our awesome team</h1>
-  <h2></h2>
-</div>
+  <div class="title">
+    <h1>Meet the team</h1>
+    <p>Team spirit starts with spirited humans. We believe great work<br>
+      begins with happy people and ends with happy clients.</p>
+
+  </div>
 
   <section class="carousel">
-    <span class="scroll-left scroll-chevron">❮</span>
-    <span class="scroll-right scroll-chevron">❯</span>
     <div class="carousel__container">
-
       <div class="carousel-item">
-        <img class="carousel-item__img" src="https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="People">
         <div class="carousel-item__details">
-          <p class="carousel-item__details--title">Título descriptivo del vídeo en curso</p>
-          <p class="carousel-item__details--subtitle">Programmer</p>
+          <img class="carousel-item__img" src="man.png">
+          <p class="carousel-item__details--title">Araj Khandelwal</p>
+          <p class="carousel-item__details--subtitle">Head</p>
           <div class="carousel-item__details--icons">
             <a href=""><i class="fa fa-linkedin"></i></a>
             <a href=""><i class="fa fa-instagram"></i></a>
@@ -189,10 +189,10 @@ color: white;
         </div>
       </div>
       <div class="carousel-item">
-        <img class="carousel-item__img" src="https://images.pexels.com/photos/1173777/pexels-photo-1173777.jpeg?cs=srgb&dl=aerial-aerial-photography-aerial-shot-1173777.jpg&fm=jpg" alt="People">
         <div class="carousel-item__details">
-          <p class="carousel-item__details--title">Título descriptivo del vídeo en curso</p>
-          <p class="carousel-item__details--subtitle">Programmer</p>
+          <img class="carousel-item__img" src="man.png">
+          <p class="carousel-item__details--title">Shishir Chaurasiya</p>
+          <p class="carousel-item__details--subtitle">Head</p>
           <div class="carousel-item__details--icons">
             <a href=""><i class="fa fa-linkedin"></i></a>
             <a href=""><i class="fa fa-instagram"></i></a>
@@ -201,10 +201,10 @@ color: white;
         </div>
       </div>
       <div class="carousel-item">
-        <img class="carousel-item__img" src="https://images.pexels.com/photos/2489986/pexels-photo-2489986.jpeg?cs=srgb&dl=bangs-beautiful-beauty-2489986.jpg&fm=jpg" alt="People">
         <div class="carousel-item__details">
-          <p class="carousel-item__details--title">Título descriptivo del vídeo en curso</p>
-          <p class="carousel-item__details--subtitle">Programmer</p>
+          <img class="carousel-item__img" src="man.png">
+          <p class="carousel-item__details--title">Sanjeet Kotarya</p>
+          <p class="carousel-item__details--subtitle">Super Coordinator</p>
           <div class="carousel-item__details--icons">
             <a href=""><i class="fa fa-linkedin"></i></a>
             <a href=""><i class="fa fa-instagram"></i></a>
@@ -213,10 +213,10 @@ color: white;
         </div>
       </div>
       <div class="carousel-item">
-        <img class="carousel-item__img" src="https://images.pexels.com/photos/2365701/pexels-photo-2365701.jpeg?cs=srgb&dl=blur-city-commuter-2365701.jpg&fm=jpg" alt="People">
         <div class="carousel-item__details">
-          <p class="carousel-item__details--title">Título descriptivo del vídeo en curso</p>
-          <p class="carousel-item__details--subtitle">Programmer</p>
+          <img class="carousel-item__img" src="man.png">
+          <p class="carousel-item__details--title">Anmol Upadhyay</p>
+          <p class="carousel-item__details--subtitle">Coordintor</p>
           <div class="carousel-item__details--icons">
             <a href=""><i class="fa fa-linkedin"></i></a>
             <a href=""><i class="fa fa-instagram"></i></a>
@@ -225,10 +225,10 @@ color: white;
         </div>
       </div>
       <div class="carousel-item">
-        <img class="carousel-item__img" src="https://images.pexels.com/photos/2065805/pexels-photo-2065805.png?cs=srgb&dl=adult-beautiful-denim-jacket-2065805.jpg&fm=jpg" alt="People">
         <div class="carousel-item__details">
-          <p class="carousel-item__details--title">Título descriptivo del vídeo en curso</p>
-          <p class="carousel-item__details--subtitle">Programmer</p>
+          <img class="carousel-item__img" src="man.png">
+          <p class="carousel-item__details--title">Vaishnavi Sinha</p>
+          <p class="carousel-item__details--subtitle">Coordinator</p>
           <div class="carousel-item__details--icons">
             <a href=""><i class="fa fa-linkedin"></i></a>
             <a href=""><i class="fa fa-instagram"></i></a>
@@ -237,10 +237,10 @@ color: white;
         </div>
       </div>
       <div class="carousel-item">
-        <img class="carousel-item__img" src="https://images.pexels.com/photos/1253718/pexels-photo-1253718.jpeg?cs=srgb&dl=botanical-cacti-cactus-1253718.jpg&fm=jpg" alt="People">
         <div class="carousel-item__details">
-          <p class="carousel-item__details--title">Título descriptivo del vídeo en curso</p>
-          <p class="carousel-item__details--subtitle">Programmer</p>
+          <img class="carousel-item__img" src="man.png">
+          <p class="carousel-item__details--title">Bikas Kumar</p>
+          <p class="carousel-item__details--subtitle">Coordinator</p>
           <div class="carousel-item__details--icons">
             <a href=""><i class="fa fa-linkedin"></i></a>
             <a href=""><i class="fa fa-instagram"></i></a>
@@ -249,10 +249,10 @@ color: white;
         </div>
       </div>
       <div class="carousel-item">
-        <img class="carousel-item__img" src="https://images.pexels.com/photos/1797350/pexels-photo-1797350.jpeg?cs=srgb&dl=beauty-close-up-dark-1797350.jpg&fm=jpg" alt="People">
         <div class="carousel-item__details">
-          <p class="carousel-item__details--title">Título descriptivo del vídeo en curso</p>
-          <p class="carousel-item__details--subtitle">Programmer</p>
+          <img class="carousel-item__img" src="man.png">
+          <p class="carousel-item__details--title">Rudra</p>
+          <p class="carousel-item__details--subtitle">Coordinator</p>
           <div class="carousel-item__details--icons">
             <a href=""><i class="fa fa-linkedin"></i></a>
             <a href=""><i class="fa fa-instagram"></i></a>
@@ -260,24 +260,12 @@ color: white;
           </div>
         </div>
       </div>
-      
-      <div class="carousel-item">
-        <img class="carousel-item__img" src="https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="People">
-        <div class="carousel-item__details">
-          <p class="carousel-item__details--title">Título descriptivo del vídeo en curso</p>
-          <p class="carousel-item__details--subtitle">Programmer</p>
-          <div class="carousel-item__details--icons">
-            <a href=""><i class="fa fa-linkedin"></i></a>
-            <a href=""><i class="fa fa-instagram"></i></a>
 
-          </div>
-        </div>
-      </div>
       <div class="carousel-item">
-        <img class="carousel-item__img" src="https://images.pexels.com/photos/1173777/pexels-photo-1173777.jpeg?cs=srgb&dl=aerial-aerial-photography-aerial-shot-1173777.jpg&fm=jpg" alt="People">
         <div class="carousel-item__details">
-          <p class="carousel-item__details--title">Título descriptivo del vídeo en curso</p>
-          <p class="carousel-item__details--subtitle">Programmer</p>
+          <img class="carousel-item__img" src="man.png">
+          <p class="carousel-item__details--title">Vishal KR</p>
+          <p class="carousel-item__details--subtitle">Coordinator</p>
           <div class="carousel-item__details--icons">
             <a href=""><i class="fa fa-linkedin"></i></a>
             <a href=""><i class="fa fa-instagram"></i></a>
@@ -286,10 +274,12 @@ color: white;
         </div>
       </div>
       <div class="carousel-item">
-        <img class="carousel-item__img" src="https://images.pexels.com/photos/2489986/pexels-photo-2489986.jpeg?cs=srgb&dl=bangs-beautiful-beauty-2489986.jpg&fm=jpg" alt="People">
         <div class="carousel-item__details">
+          <img class="carousel-item__img" src="man.png">
           <p class="carousel-item__details--title">Título descriptivo del vídeo en curso</p>
           <p class="carousel-item__details--subtitle">Programmer</p>
+          <circle style="background: #952AFF"></circle>
+
           <div class="carousel-item__details--icons">
             <a href=""><i class="fa fa-linkedin"></i></a>
             <a href=""><i class="fa fa-instagram"></i></a>
@@ -298,10 +288,12 @@ color: white;
         </div>
       </div>
       <div class="carousel-item">
-        <img class="carousel-item__img" src="https://images.pexels.com/photos/2365701/pexels-photo-2365701.jpeg?cs=srgb&dl=blur-city-commuter-2365701.jpg&fm=jpg" alt="People">
         <div class="carousel-item__details">
+          <img class="carousel-item__img" src="man.png">
           <p class="carousel-item__details--title">Título descriptivo del vídeo en curso</p>
           <p class="carousel-item__details--subtitle">Programmer</p>
+          <circle style="background: #952AFF"></circle>
+
           <div class="carousel-item__details--icons">
             <a href=""><i class="fa fa-linkedin"></i></a>
             <a href=""><i class="fa fa-instagram"></i></a>
@@ -310,10 +302,12 @@ color: white;
         </div>
       </div>
       <div class="carousel-item">
-        <img class="carousel-item__img" src="https://images.pexels.com/photos/2065805/pexels-photo-2065805.png?cs=srgb&dl=adult-beautiful-denim-jacket-2065805.jpg&fm=jpg" alt="People">
         <div class="carousel-item__details">
+          <img class="carousel-item__img" src="man.png">
           <p class="carousel-item__details--title">Título descriptivo del vídeo en curso</p>
           <p class="carousel-item__details--subtitle">Programmer</p>
+          <circle style="background: #952AFF"></circle>
+
           <div class="carousel-item__details--icons">
             <a href=""><i class="fa fa-linkedin"></i></a>
             <a href=""><i class="fa fa-instagram"></i></a>
@@ -322,10 +316,12 @@ color: white;
         </div>
       </div>
       <div class="carousel-item">
-        <img class="carousel-item__img" src="https://images.pexels.com/photos/1253718/pexels-photo-1253718.jpeg?cs=srgb&dl=botanical-cacti-cactus-1253718.jpg&fm=jpg" alt="People">
         <div class="carousel-item__details">
+          <img class="carousel-item__img" src="man.png">
           <p class="carousel-item__details--title">Título descriptivo del vídeo en curso</p>
           <p class="carousel-item__details--subtitle">Programmer</p>
+          <circle style="background: #952AFF"></circle>
+
           <div class="carousel-item__details--icons">
             <a href=""><i class="fa fa-linkedin"></i></a>
             <a href=""><i class="fa fa-instagram"></i></a>
@@ -334,10 +330,26 @@ color: white;
         </div>
       </div>
       <div class="carousel-item">
-        <img class="carousel-item__img" src="https://images.pexels.com/photos/1797350/pexels-photo-1797350.jpeg?cs=srgb&dl=beauty-close-up-dark-1797350.jpg&fm=jpg" alt="People">
         <div class="carousel-item__details">
+          <img class="carousel-item__img" src="man.png">
           <p class="carousel-item__details--title">Título descriptivo del vídeo en curso</p>
           <p class="carousel-item__details--subtitle">Programmer</p>
+          <circle style="background: #952AFF"></circle>
+
+          <div class="carousel-item__details--icons">
+            <a href=""><i class="fa fa-linkedin"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-item__details">
+          <img class="carousel-item__img" src="man.png">
+          <p class="carousel-item__details--title">Título descriptivo del vídeo en curso</p>
+          <p class="carousel-item__details--subtitle">Programmer</p>
+          <circle style="background: #952AFF"></circle>
+
           <div class="carousel-item__details--icons">
             <a href=""><i class="fa fa-linkedin"></i></a>
             <a href=""><i class="fa fa-instagram"></i></a>
@@ -347,5 +359,7 @@ color: white;
       </div>
     </div>
   </section>
+
+</div>
 
 </div>
