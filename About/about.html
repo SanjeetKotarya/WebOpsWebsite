@@ -1,130 +1,143 @@
-  <!-- BOOTSTRAP -->
 
+<style>
+  .about .about-section {
+    margin-top: 10px;
+  }
 
-  <style>
-    .about-section{
-      margin-top: 10px;
-    }
-    
-    .row{
-      padding: 50px 0;
-      height: 110vh;
+  .about .row {
+    padding: 50px 0;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .about .abox {
+    position: relative;
+    width: 70%;
+    height: 80vh;
+    display: block;
+  }
+
+  @media (max-width: 767px) {
+    .about .abox {
+      position: relative;
+      height: fit-content;
       width: 100%;
-      display: flex;
-  justify-content: center;
-  overflow: hidden;
-
-  align-items: center;
-
     }
-    .abox{
-      position: relative;
-      width: 50%;
-      height: 100%;
-      display:block;
-      justify-content: center;
-    }
-    
-    @media (max-width: 767px) {
-      .abox {
-        position: absolute;
-        width: 100%;
 
-      }
-      .row{
-        display: inline-block;
-      }
-
-      .text-box{
-        margin-top: 50px;
-        border: solid white 1px;
-        color: white;
-      }
+    .about .row {
+      display: block;
+      width: 100%;
 
     }
-    .about-section h2 {
-      font-size: 50px;
-      font-family: "Times New Roman";
-      text-transform: uppercase;
-    }
-    
-    .about-section h3 {
-      font-family: Helvetica;
-      padding: 8px 0;
-      margin-bottom: 20px;
-      font-style: italic;
-    }
-    .abox p {
-      margin-bottom: 30px;
-    }
-    .abox a {
+
+    .about .text-box {
+      margin-top: 50px;
+      width: 100%;
       color: black;
-      padding: 18px 36px;
-      font-size: 12px;
-      position: relative;
-      border: solid black 1px;
-      letter-spacing: 4px;
+      background: rgba(black, 0.5);
     }
-    
-    .abox a:hover {
-      text-decoration: none;
-      color: white;
-      background: black;
-    }
-    .abox .img1{
-      position: absolute;
-      height: 40%;
-      border-top-right-radius: 50px;
-      border-bottom-left-radius: 50px;
-      top: 0;
-      height: 40%;
-      left: 0;
-    }
-    .abox .img2{
-      position: absolute;
-      height: 50%;
-      bottom: 0;
-      right: 0;
-      border-top-right-radius: 50px;
-      border-bottom-left-radius: 50px;
-    }
-    
-    .text-box{
-      backdrop-filter: blur(12px);
-      padding: 20px;
-    }
-    </style>
-    <div class="about-section">
-      <div class="container">
-        <div class="row">
-          <div class="abox" style="text-align: center;">
-            <img class="img1" src="/BACKGORUND.png">
-            <img class="img2" src="/BACKGORUND.png">
-          </div>
-          <div class="abox" style="text-align: left; padding: 0 50px;">
-            <div class="text-box">
-            <h2>About</h2>
+    .about .abox p {
+    font-size: 2vh;
+  }
+  }
 
-            <h3>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Nesciunt esse autem hic!
-            </h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
-              asperiores voluptates, tenetur incidunt libero at aut culpa
-              atque ab repellat deserunt ullam eaque eum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae quod magnam sequi enim quo laudantium soluta
-              blanditiis quia consectetur, expedita temporibus, cum officiis
-              totam doloremque unde harum dolor, veritatis quae sunt!
-              Repellendus, qui. Corporis voluptas optio doloribus, at quidem
-              cumque?
-            </p>
-            <a href="#sec-contact">MORE INFO</a>
+
+
+  .about .abox p {
+    margin-bottom: 30px;
+    font-size: 3vh;
+  }
+
+  .about .abox a {
+    color: white;
+    padding: 18px 36px;
+    font-size: 2vh;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 4px;
+    background: black;
+    text-decoration: none;
+    border-radius: 30px;
+  }
+  .about .abox a span{
+    width: 105%;
+    height: 0px;
+    left: -2px;
+    bottom: -1px;
+    position: absolute;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    transition: 0.2s ease-in-out;
+    background-color: white;
+    align-items: center;
+    mix-blend-mode: difference;
+    justify-content: center;
+  }
+  .about .abox a:hover span{
+height: 105%;
+border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+
+  .about .text-box {
+    backdrop-filter: blur(12px);
+    padding: 20px;
+  }
+  .about .abox .titles{
+    font-family: Poppins;
+  font-size: 4em;
+  text-align: left;
+  padding-left: 50px;
+  }
+  .about .abox .titles .title1{
+  -webkit-text-stroke: 0.5px black;
+  -webkit-text-fill-color: white;
+}
+.about .abox .titles .title1:hover{
+  -webkit-text-fill-color: black;
+}
+
+.about .abox .titles .title2 {
+  -webkit-text-fill-color: black;
+}
+
+.about .abox .titles .title2:hover {
+  -webkit-text-stroke: 0.5px black;
+  -webkit-text-fill-color: white;
+}
+
+
+</style>
+<div class="about">
+<div class="about-section">
+  <div class="container">
+    <div class="row">
+      <div class="abox">
+          <div class="titles">
+            <span class="title2">Who We Are</span>
           </div>
-          </div>
+      </div>
+      <div class="abox" style="text-align: left; padding: 0 50px;">
+        <div class="text-box">
+          <p>
+We are a highly skilled group 
+of students dedicated to providing exceptional web operations
+ support. With expertise in website development, security, and 
+ performance optimization, we help you maximize your online potential. 
+ From small businesses to large organizations, we offer tailored solutions 
+ to meet your unique needs. Partner with us to enhance your web presence and 
+ achieve your digital goals. about us today to explore how we can assist you
+  on your web journey.
+          </p>
+          <a href="#sec-about">See More
+            <span></span>
+          </a>
         </div>
       </div>
     </div>
+  </div>
+</div>
+</div>
