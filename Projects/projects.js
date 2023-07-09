@@ -1,4 +1,4 @@
-fetch('Projects/project.html')
+fetch('Projects/projects.html')
     .then(res => res.text())
     .then(text => {
         let oldelem = document.querySelector("script#project-section");
