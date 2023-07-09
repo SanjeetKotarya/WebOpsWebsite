@@ -1,1 +1,241 @@
 
+<style>
+.test {
+  background-color: black;
+  color: #fff;
+  height: 100vh;
+  border: solid black 1px;
+  overflow: hidden;
+}
+
+/*Cards*/
+.test section {
+  position: relative;
+  width: 100%;
+}
+
+.title {
+  padding: 30px 60px;
+  font-family: Poppins;
+  font-size: 4em;
+}
+
+.title1 {
+  -webkit-text-stroke: 0.5px #fff;
+  -webkit-text-fill-color: black;
+}
+
+.title1:hover {
+  -webkit-text-fill-color: #fff;
+}
+
+.title2 {
+  -webkit-text-fill-color: #fff;
+}
+
+.title2:hover {
+  -webkit-text-stroke: 0.5px #fff;
+  -webkit-text-fill-color: black;
+}
+.projects{
+  overflow-x: scroll;
+  width: 100%;
+}
+.projects::-webkit-scrollbar {
+    display: none;
+  }
+.projects table{
+  margin-left: 150px;
+  overflow: hidden;
+  height: 400px;
+  padding: 0;
+
+}
+
+.projects table tr td{
+  padding: 25px;
+  min-width: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: solid #202020 1px;
+  position: relative;
+}
+
+.projects a, h1,h2,h3,h6,p{
+  z-index: 5;
+  position: relative;
+  font-family: Poppins;
+
+}
+.projects h6{
+  color: #393838;
+}
+.projects a{
+  text-align: left;
+  position: absolute;
+  width: 85%;
+  padding: 11px 11px;
+  bottom: 23px;
+  border-radius: 10px;
+  text-decoration: none;
+  border:solid #202020 2px;
+  color: white;
+  transition: 0.4s ease-out;
+  cursor: pointer;
+}
+
+
+.projects td:hover a{
+  background:black ;
+  border-color: transparent;
+}
+.projects tr td .bulb{
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 100%;
+  top:-90px;
+  left: -90px;
+  transition: 0.4s ease-out;
+}
+.projects td:hover .bulb{
+  width: 150%;
+  height: 150%;
+}
+.projects h1{
+  font-size: 25px;
+  top: 30px;
+  position: absolute;
+}
+.projects p{
+  font-size: 18px;
+}
+
+.projects a::after {
+  content: "\2192";
+  position: absolute;
+  right: 10px;
+  top: -10px;
+  transition: 0.4s ease-out;
+  font-size: 40px;
+}
+
+.projects a:hover::after {
+  right: 5px;
+}
+.projects td:hover a {
+  color: #F9B234;
+}
+.title .title3{
+  position: absolute;
+  font-size: 18px;
+  top: 10%;
+  left: 50%;
+  display: none;
+}
+.title .title4{
+  position: absolute;
+  padding: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  top: 10%;
+  right: 10%;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border:solid #2C4692 1px;
+  font-size: 60px;
+  cursor: pointer;
+  color: #2C4692;
+  transition: 0.4s ease-out;
+
+
+}
+.title .title4:hover{
+  padding-left: 10px;
+}
+@media (max-width: 768px) {
+  .title .title1, .title2 {
+    font-size: 40px;
+  }
+
+
+  .projects table{
+    height: 300px;
+    margin-left: 90px;
+  }
+  .projects table tr td{
+  padding: 12.5px;
+  min-width: 250px;
+}
+.projects tr td .bulb{
+  top: -60px;
+  left: -60px;
+
+}
+}
+
+@media (min-width: 800px) {
+  .title .title3 {
+    display: block;
+  }}
+
+</style>
+<div class="test">
+<section>
+  <div class="title">
+    <span class="title1">Our</span><br>
+    <span class="title2">Projects</span>
+    <span class="title3">More than a marketing group, we go above & beyond<br>
+      to support your growth every step of the way. From<br>
+      investor lead generation, to corporate.</span>
+    <span class="title4">&rarr;</span>
+
+  </div>
+<div class="projects">
+  <table>
+    <tr>
+      <td>
+        <h1>TITLE</h1>
+        <p>About project</p>
+        <h6>BRAND|WEBSITE</h6>
+        <a href="">Veiw More</a>
+        <span class="bulb" style="background:#952aff;"></span>
+      </td>
+      <td>
+        <h1>TITLE</h1>
+        <p>About project</p>
+        <h6>BRAND|WEBSITE</h6>
+        <a href="">Veiw More</a>
+        <span class="bulb" style="background:#3ecd5e;"></span>
+      </td>
+      <td>
+        <h1>TITLE</h1>
+        <p>About project</p>
+        <h6>BRAND|WEBSITE</h6>
+        <a href="">Veiw More</a>
+        <span class="bulb" style="background:#de3098;"></span>
+      </td>
+      <td>
+        <h1>TITLE</h1>
+        <p>About project</p>
+        <h6>BRAND|WEBSITE</h6>
+        <a href="">Veiw More</a>
+        <span class="bulb" style="background:#4c49ea;"></span>
+      </td>
+      <td>
+        <h1>TITLE</h1>
+        <p>About project</p>
+        <h6>BRAND|WEBSITE</h6>
+        <a href="">Veiw More</a>
+        <span class="bulb" style="background:#3ecd5e;"></span>
+      </td>
+ 
+    </tr>
+  </table>
+</div>
+
+</section>
+
+</div>
