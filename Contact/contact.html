@@ -1,85 +1,160 @@
+<!-- BOOTSTRAP -->
+
+
 <style>
-  #sec-contact{
-  position: relative;
-  text-align: center;
-  justify-content: center;
-  background: linear-gradient(to bottom,#0E161B, black);
-  color: white;
-  overflow: hidden;
-  border-radius: 25px;
-  padding: 150px 10px 150px 10px;
-  font-family: Orbitron;
-}
-
-
-#sec-contact .ques{
-  position: relative;
-  margin-bottom: 30px;
-  font-size: xx-large;
-  
-}
-#sec-contact table{
-  width: 90%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0px;
-}
-#sec-contact table td{
-  border-left: solid #1B2328 1px;
-  padding: 0;
-  margin: 0;
-  padding-top: 100px;
-}
-
-@media only screen and (max-width: 800px) {
-  #sec-contact span{
-    display: inline-block;
-    width: 60%;
-  }
-  #sec-contact{
-    padding: 80px 30px 80px 30px;
-    font-size: 2.5vh;
+  .contact .about-section {
+    margin-top: 10px;
   }
 
-}
+  .contact .row {
+    padding: 50px 0;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .contact .abox {
+    position: relative;
+    width: 50%;
+    height: 80vh;
+    display: block;
+  }
+
+  @media (max-width: 767px) {
+    .contact .abox {
+      position: relative;
+      height: fit-content;
+      width: 100%;
+    }
+
+    .contact .row {
+      display: block;
+      width: 100%;
+
+    }
+
+    .contact .text-box {
+      margin-top: 50px;
+      width: 100%;
+      font-size: 14px;
+      color: black;
+      background: rgba(black, 0.5);
+    }
+  }
 
 
-#sec-contact span{
-  padding: 13px 24px 13px 24px;
-  border-radius: 25px;
-  font-size:2.5vh;
-  cursor: pointer;
-  margin: 10px;
-  position: relative;
-  background: #0E161B;
-  transition: .1s ease-in;
-  z-index: 5;
-  border: solid #35454e 1px;
+
+  .contact .abox p {
+    margin-bottom: 30px;
+    font-size: 1.5em;
+  }
+
+  .contact .abox a {
+    color: white;
+    padding: 18px 36px;
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 4px;
+    background: black;
+    text-decoration: none;
+    border-radius: 25px;
+  }
+  .contact .abox a span{
+    width: 105%;
+    height: 0px;
+    left: -2px;
+    bottom: -1px;
+    position: absolute;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    transition: 0.2s ease-in-out;
+    background-color: white;
+    align-items: center;
+    mix-blend-mode: difference;
+    justify-content: center;
+  }
+  .contact .abox a:hover span{
+height: 105%;
+border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .contact .abox .img1 {
+    position: absolute;
+    height: 40%;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    top: 0;
+    height: 40%;
+    left: 0;
+  }
+
+  .contact .abox .img2 {
+    position: absolute;
+    height: 50%;
+    bottom: 0;
+    right: 0;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+
+  .contact .text-box {
+    backdrop-filter: blur(12px);
+    padding: 20px;
+  }
+  .contact .abox .titles{
+    font-family: Poppins;
+  font-size: 4em;
+  text-align: left;
+  padding-left: 50px;
+  }
+  .contact .abox .titles .title1{
+  -webkit-text-stroke: 0.5px black;
+  -webkit-text-fill-color: white;
 }
-#sec-contact span:hover{
-  border: solid white 1px;
+.contact .abox .titles .title1:hover{
+  -webkit-text-fill-color: black;
 }
 
+.contact .abox .titles .title2 {
+  -webkit-text-fill-color: black;
+}
+
+.contact .abox .titles .title2:hover {
+  -webkit-text-stroke: 0.5px black;
+  -webkit-text-fill-color: white;
+}
 
 
 </style>
-<section id="sec-contact">
-  <table>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </table>
-  <div class="ques">If you have a strong passion for creating a significant impact 
-    in the field of Web Development,
-    we'd love to hear from you!</div>
-  <span style="background: white; color: black;">Join our team</span>
-  <span>Contact us</span>
-
-</section>
+<div class="contact">
+<div class="about-section">
+  <div class="container">
+    <div class="row">
+      <div class="abox">
+          <div class="titles">
+            <span class="title1">Work</span><br>
+            <span class="title2">With Us</span>
+          </div>
+      </div>
+      <div class="abox" style="text-align: left; padding: 0 50px;">
+        <div class="text-box">
+          <p>
+            Our team members are our most important asset. We’re 
+            looking for people who share our passion for honesty, 
+            fairness and going over-and-above to provide exceptional 
+            customer service. We offer competitive compensation, great
+            benefits and strive to help you achieve a healthy work-life balance.<br><br>
+            If you are as passionate about web development care as we are, let’s work together.
+          </p>
+          <a href="#sec-contact">Contact Us
+            <span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
